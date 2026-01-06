@@ -10,7 +10,7 @@ const authUser = (req,res,next)=>{
 
     const token  = headers.split(" ")[1];
     try {
-        const decode = jwt.verify(token,"sandeepkumar");
+        const decode = jwt.verify(token,process.env.ENCODE_KEY);
         // console.log('this is decode',decode);
         req.user = decode;
         // console.log('this is req.user',req.user);

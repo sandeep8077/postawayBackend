@@ -34,7 +34,7 @@ app.get('/',(req,res)=>{
 app.use(errorHandlerMiddleware);
 
 app.listen(3800,async()=>{
-    console.log("Error in starting server");
-    console.log("Server is running on http://localhost:3800");
+   
+ console.log("Server is running on http://localhost:3800");
     connectDb();
 })

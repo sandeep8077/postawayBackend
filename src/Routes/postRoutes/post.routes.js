@@ -10,7 +10,7 @@ const postRouter = express.Router()
 postRouter.get('/all',authUser,postController.getAllPost);
 postRouter.post('/',authUser,uploads.single('media'),postController.createNewPost);
 postRouter.get('/:id',authUser,postController.getSpecificPost)
-postRouter.get("/like/:id",authUser,postController.likeToggel)
+postRouter.post("/like/:id",authUser,postController.likeToggel)
 postRouter.get('/like/all/:id',authUser,postController.allLikes);
 
 export default postRouter;
